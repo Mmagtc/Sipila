@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet">
+    <title>Inicio | Sipila</title>
+</head>
+
+<body>
+    <header class="header" >
+        <div class="bg-light">
+            <div class="container"> 
+                <nav class="navbar navbar-expand-lg  navbar-light  ">
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="nav navbar-nav  w-100  justify-content-center">
+                        <a class="nav-item nav-link active" href="index.html">Inicio</a>
+                        <a class="nav-item nav-link" href="../Nosotros/index.html">Nosotros</a>
+                        <a class="nav-item nav-link" href="../Servicios/index.html">Servicios</a>
+                        <a class="nav-item nav-link" href="../Contacto/index.html">Contacto</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="text-header  d-fex  aling-item-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 ">
+                        <h2><span>SIPILA</span></h2>
+                        <p>Sistema de información para la gestión de Inventarios, Logística y Apartados PQRS </p>
+
+                        <!-- Botones de sesion y registro-->
+                        <a href="" class="btn btn-iniciar" data-toggle="modal" data-target="#exampleModal4"><span>INICIAR SESIÓN</span></a> <a href="" class="btn btn-registro" data-toggle="modal" data-target="#exampleModal5"><span>REGISTRARSE</span></a>
+                        
+                        <!-- Botones de sesion usuario-->
+                        <div class="modal fade1" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <p><h6>SELECCIONA TU USUARIO</h6></p>
+                            <button type="button" class="btn btn-cliente" data-toggle="modal" data-target="#exampleModal" > CLIENTE</button>
+                            <button type="button" class="btn btn-empleado" data-toggle="modal" data-target="#exampleModal2"> EMPLEADO</button>
+                            <button type="button" class="btn btn-administrador" data-toggle="modal" data-target="#exampleModal3"> ADMINISTRADOR</button>
+                        </div>
+                        
+                        <!-- Ventana modal-->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div> 
+                                    <!-- Formularios-->
+                                    <div class="modal-body">
+                                        <form id="myForm" action="../Inicio_Cliente/index.html" method="get">
+                                            <div class="form-group"> 
+                                                <h1>CLIENTE</h1>
+                                            </div><br>
+                                            <!-- Email-->
+                                            <div class="form-group">								
+                                                <input type="email" class="form-control" id="emailIngreso" aria-describedby="emailHelp" placeholder="Usuario:" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
+                                            </div>
+                                            <!--Contraseña-->
+                                            <div class="form-group">								
+                                                <input type="password" class="form-control" id="passIngreso" placeholder="Contraseña" required pattern="[A-Za-z0-9]{5,8}" title="Escriba entre 5 y 8 caracteres">
+                                            </div>
+                                            <div class="row px-3 pb-3 mb-3">
+                                                <div class="form-group form-check ">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1">Recordar mis datos</label>
+                                                </div>
+                                                <a href="" class="col nav-link col-6 m-0 p-0 text-right">¿Olvidó su contraseña?</a>
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="submit" id="btn-submit" class="btn btn-primary" onclick="validarC()" value="enviar">Enviar</button>
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ventana modal2-->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div> 
+                                    <!-- Formularios-->
+                                    <div class="modal-body">
+                                        <form id="myForm" action="../Inicio_Empleado/index.html" method="get">
+                                            <div class="form-group"> 
+                                                <h1>EMPLEADO</h1>
+                                            </div><br>
+                                            <!-- Email-->
+                                            <div class="form-group">								
+                                                <input type="email" class="form-control" id="emailIngreso" aria-describedby="emailHelp" placeholder="Usuario:" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
+                                            </div>
+                                            <!--Contraseña-->
+                                            <div class="form-group">								
+                                                <input type="password" class="form-control" id="passIngreso" placeholder="Contraseña" required pattern="[A-Za-z0-9]{5,8}" title="Escriba entre 5 y 8 caracteres">
+                                            </div>
+                                            <div class="row px-3 pb-3 mb-3">
+                                                <div class="form-group form-check ">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1">Recordar mis datos</label>
+                                                </div>
+                                                <a href="" class="col nav-link col-6 m-0 p-0 text-right">¿Olvidó su contraseña?</a>
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="submit" id="btn-submit" class="btn btn-primary" onclick="validarE()" value="enviar">Enviar</button>
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ventana modal3-->
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div> 
+                                    <!-- Formularios-->
+                                    <div class="modal-body">
+                                        <form id="myForm" action="../Inicio_Administrador/index.html" method="get">
+                                            <div class="form-group"> 
+                                                <h1>ADMINISTRADOR</h1>
+                                            </div><br>
+                                            <!-- Email-->
+                                            <div class="form-group">								
+                                                <input type="email" class="form-control" id="emailIngreso" aria-describedby="emailHelp" placeholder="Usuario:" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
+                                            </div>
+                                            <!--Contraseña-->
+                                            <div class="form-group">								
+                                                <input type="password" class="form-control" id="passIngreso" placeholder="Contraseña" required pattern="[A-Za-z0-9]{5,8}" title="Escriba entre 5 y 8 caracteres">
+                                            </div>
+                                            <div class="row px-3 pb-3 mb-3">
+                                                <div class="form-group form-check ">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1">Recordar mis datos</label>
+                                                </div>
+                                                <a href="" class="col nav-link col-6 m-0 p-0 text-right">¿Olvidó su contraseña?</a>
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="submit" id="btn-submit" class="btn btn-primary" onclick="validarA()" value="enviar">Enviar</button>
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Ventana modal registro-->
+                        <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div> 
+                                    <!-- Formularios-->
+                                    <div class="modal-body">
+                                        <form id="myForm" action="ModuloLogistica.html" method="get">
+                                            <div class="form-group"> 
+                                                <h1>REGISTRATE</h1>
+                                            </div><br>
+                                            <!--NOMBRE -->
+                                            <div class="form-group">
+                                                <label for="Nombre" class="control-label"><em>Nombres</em></label>
+                                                <div class="">
+                                                    <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Nombres">
+                                                </div>
+                                            </div>
+                                            <!--APELLIDOS -->
+                                            <div class="form-group">
+                                                <label for="Apellidos" class="control-label"><em>Apellidos</em></label>
+                                                <div class="">
+                                                    <input type="text" class="form-control" name="Apellidos" id="Apellidos" placeholder="Apellidos">
+                                                </div>
+                                            </div>
+                                            <!--Tipo de documento-->
+                                            <div class="form-group">
+                                                <label for="TipoDocumento" class="control-label"><em>Tipo de Documento</em></label>
+                                                <div class="">
+                                                    <select name="TipoServicio" id="TipoServicio" class="form-control">
+                                                        <option value="1">Cédula de ciudadania</option>
+                                                        <option value="2">Cédula de extranjeria </option>
+                                                    </select>
+                                                </div>  
+                                            </div>
+                                            <!--DOCUMENTO -->
+                                            <div class="form-group">
+                                                <label for="Documento" class="control-label"><em>Documento</em></label>
+                                                <div class="">
+                                                    <input type="text" class="form-control" name="Documento" id="Documento" placeholder="Documento">
+                                                </div>
+                                            </div>
+                                            <!-- CIUDAD -->
+                                            <div class="form-group">
+                                                <label for="Ciudad" class="control-label"><em>Ciudad</em></label>
+                                                <div class="">
+                                                    <select name="Ciudad" id="Ciudad" class="form-control">
+                                                        <option value="1">Bogotá</option>
+                                                        <option value="2">Medellín</option>
+                                                        <option value="3">Cali</option>
+                                                        <option value="4">Barrancabermeja</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--DIRECCION -->
+                                            <div class="form-group">
+                                                <label for="Direccion" class="control-label"><em>Direccion</em></label>
+                                                <div class="">
+                                                    <input type="text" class="form-control" name="Direccion" id="Direccion" placeholder="Direccion">
+                                                </div>
+                                            </div>
+                                            <!--EMAIL -->
+                                            <div class="form-group">
+                                                <label for="Email" class="control-label"><em>Email</em></label>
+                                                <div class="">
+                                                    <input type="text" class="form-control" name="Email" id="Email" placeholder="Email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
+                                                </div>
+                                            </div>
+                                            <!--CONTRASEÑA-->
+                                            <div class="form-group">
+                                                <label for="Contraseña" class="control-label"><em>Contraseña</em></label>
+                                                <div class="">
+                                                    <input type="text" class="form-control" name="Contraseña" id="Contraseña" placeholder="Contraseña" required pattern="[A-Za-z0-9]{4,8}" title="Escriba entre 4 y 8 caracteres">
+                                                </div>
+                                            </div>
+                                            <!--Enviar y Cancelar-->
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-primary" onclick="validar()" value="enviar">Enviar</button>
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <footer class="Footer">
+        <div class="container-fluid padding">
+            <div class="row text-center">
+
+                <div class="col-md-4">
+                    <hr class="light">
+                    <img src="images/log0.png" width="240" height="190" alt="">
+                    <hr class="light">
+                    <p>Teléfono: 301-6411-695</p>
+                    <p>Contácto@tecniIndustrial.com</p>
+                    <p>Cl. 8 Bis #81F</p>
+                    <p>Bogotá, Colombia</p>
+                </div>
+
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>MAPA DE NAVEGACIÓN</h5>
+                    <hr class="light">
+                    <p> <a href="index.html">Inicio</a> </p> 
+                    <p> <a href="../Nosotros/index.html">Nosotros</a> </p> 
+                    <p> <a href="../Servicios/index.html">Servicios</a> </p> 
+                    <p> <a href="../Contacto/index.html">Contacto</a> </p> 
+                </div>
+
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Redes Sociales</h5>
+                    <hr class="light">
+                    <p>Facebook</p>
+                    <p>Twitter</p>
+                    <p>Instagram</p>
+                    <p>Youtube</p>
+                    <p>Gmail</p>
+                </div>
+
+                <div class="col-md-12">
+                    <hr class="light-100">
+                    <h6>© www.sipila.com</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="validaciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
